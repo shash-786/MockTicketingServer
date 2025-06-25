@@ -140,7 +140,7 @@ func GetTicket() gin.HandlerFunc {
 		for _, ticket := range tickets {
 			ticketSummaries = append(ticketSummaries, DTO.TicketSummary{
 				TicketID: ticket.ID,
-				Title:    ticket.Description,
+				Title:    ticket.Title,
 				Status:   ticket.Status.String(),
 			})
 		}
