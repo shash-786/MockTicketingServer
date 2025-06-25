@@ -6,7 +6,6 @@ import (
 
 // User represents the 'users' table
 type User struct {
-	ID        uuid.UUID `gorm:"type:uuid;primaryKey"`
-	TicketIDs []int     `gorm:"type:integer[]"`
-	Tickets   []Ticket  `gorm:"foreignKey:UserID"`
+	ID      uuid.UUID `gorm:"type:uuid;primaryKey"`
+	Tickets []Ticket  `gorm:"foreignKey:UserID"`
 }
